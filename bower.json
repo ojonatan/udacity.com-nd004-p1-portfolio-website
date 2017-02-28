@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "slick-carousel": "slick.js#^1.6.0",
+    "clamp-js": "*"
   }
 }

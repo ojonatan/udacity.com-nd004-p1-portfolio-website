@@ -1,5 +1,6 @@
 module.exports = function(grunt){
 	require('load-grunt-tasks')(grunt);
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
@@ -63,13 +64,11 @@ module.exports = function(grunt){
 					sizes: [
 						{
 							name: 'small',
-							width: 320,
-							height: 240
+							width: 320
 						},
 						{
 							name: 'small_2x',
-							width: 640,
-							height: 480
+							width: 640
 						},
 						{
 							name: 'medium',
@@ -103,7 +102,7 @@ module.exports = function(grunt){
 					expand: true,
 					src: ['*.{gif,jpg,png}'],
 					cwd: 'images_src/',
-					dest: 'public/img/'
+					dest: 'images_responsive/'
 				}]
 			}
 		},
@@ -144,14 +143,32 @@ module.exports = function(grunt){
 					}
 				},
 				files: {
+					'public/css/slick-theme.css': 'less/slick-theme.less',
+					'public/css/slick.css': 'less/slick.less',
 					'public/css/bootstrap.css': 'less/bootstrap.custom.less',
 					'public/css/main.css': 'less/main.less'
 				}
 			}
+		},
+
+		imagemin: {													// Task
+			dynamic: {												 // Another target
+				options: {											 // Target options
+					optimizationLevel: 3,
+					svgoPlugins: [{ removeViewBox: false }],
+					use: [require('imagemin-mozjpeg')()]
+				},
+				files: [{
+					expand: true,									// Enable dynamic expansion
+					cwd: 'images_responsive/',									 // Src matches are relative to this path
+					src: ['**/*.{png,jpg,gif,jpeg}'],	 // Actual patterns to match
+					dest: 'public/img/'									// Destination path prefix
+				}]
+			}
 		}
 	});
 	grunt.registerTask('server',['express','watch']);
-	grunt.registerTask('default', ['clean', 'mkdir', 'responsive_images', 'shell']);
+	grunt.registerTask('default', ['clean', 'mkdir', 'responsive_images', 'imagemin']);
 
 };
 

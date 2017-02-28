@@ -1,170 +1,201 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="Udacity Portfolio Website" />
-	<meta name="author" content="//o.cx">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-	<meta itemprop="name" content="Udacity Portfolio Website">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta id="theme-color" name="theme-color" content="#307699"> <!-- TODO -->
-	<link href="http://weloveiconfonts.com/api/?family=zocial" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<base target="_blank">
-	<link rel="stylesheet" href="css/bootstrap.css" />
-	<link rel="stylesheet" href="css/main.css" />
-	<title>Oliver Schleede - Portfolio Site</title>
-
-	<link rel="stylesheet" href="css/main.css" />
-
-</head>
-
-<body>
-
-	<header class="container">
-		<div class="row header-row">
-			<div class="logo"><span class="span-o">O</span><span class="span-s">S</span></div>
-			<div class="name">
-				<h1>Oliver Schleede</h1>
-				<p class="name-subline">Web Developer</p>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Udacity Portfolio Website" />
+		<meta name="author" content="//o.cx">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<meta itemprop="name" content="Udacity Portfolio Website">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta id="theme-color" name="theme-color" content="#307699"> <!-- TODO -->
+		<link href="http://weloveiconfonts.com/api/?family=zocial" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<base target="_blank">
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/slick.css" />
+		<link rel="stylesheet" href="css/slick-theme.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Oliver Schleede - Portfolio Site</title>
+	</head>
+	<body>
+		<header class="container">
+			<div class="row header-row">
+				<div class="logo"><span class="span-o">O</span><span class="span-s">S</span></div>
+				<div class="name">
+					<h1>Oliver Schleede</h1>
+					<p class="name-subline">Web Developer</p>
+				</div>
 			</div>
-		</div>
-		<div class="hr" />
-	</header>
+			<div class="hr" />
+		</header>
 
-	<main class="container">
-		<section class="teaser">
-			<picture>
-				<source srcset="img/rainbow-background-1149610_xs-small_2x.jpg 2x, img/rainbow-background-1149610_xs-small.jpg" type="image/jpeg" media="(max-width: 767px)" />
-				<source srcset="img/rainbow-background-1149610_1920-medium_2x.jpg 2x, img/rainbow-background-1149610_1920-medium.jpg" type="image/jpeg" media="(max-width: 1023px)" />
-				<source srcset="img/rainbow-background-1149610_1920-large_2x.jpg 2x, img/rainbow-background-1149610_1920-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
-				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-			</picture>
-		</section>
+		<main class="container">
+			<section class="teaser">
+				<picture>
+					<source srcset="img/rainbow-background-1149610_crop-small_2x.jpg 2x, img/rainbow-background-1149610_crop-small.jpg" type="image/jpeg" media="(max-width: 767px)" />
+					<source srcset="img/rainbow-background-1149610_1920-medium_2x.jpg 2x, img/rainbow-background-1149610_1920-medium.jpg" type="image/jpeg" media="(min-width: 768px) and (max-width: 1023px)" />
+					<source srcset="img/rainbow-background-1149610_1920-large_2x.jpg 2x, img/rainbow-background-1149610_1920-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+				</picture>
+			</section>
 
-		<section class="portfolio">
+			<section class="portfolio">
 
-			<h2>Featured Work</h2>
+				<h2>Featured Work</h2>
+				<div class="row">
+					<article class="portfolio-article col-xs-6 col-sm-4">
+						<div class="slick-slider">
+							<div class="portfolio-item">
+								<picture class="portfolio-picture">
+									<source srcset="http://placehold.it/800x480/101010/ffffff 2x, http://placehold.it/400x240/111111/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+									<source srcset="http://placehold.it/1600x1200/121212/ffffff 2x, http://placehold.it/800x600/131313/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+									<source srcset="http://placehold.it/2048x1600/141414/ffffff 2x, http://placehold.it/1024x800/151515/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								</picture>
+							</div>
+							<div class="portfolio-item">
+								<picture class="portfolio-picture">
+									<source srcset="http://placehold.it/800x480/161616/ffffff 2x, http://placehold.it/400x240/171717/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+									<source srcset="http://placehold.it/1600x1200/181818/ffffff 2x, http://placehold.it/800x600/191919/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+									<source srcset="http://placehold.it/2048x1600/202020/ffffff 2x, http://placehold.it/1024x800/212121/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								</picture>
+							</div>
+							<div class="portfolio-item">
+								<picture class="portfolio-picture">
+									<source srcset="http://placehold.it/800x480/222222/ffffff 2x, http://placehold.it/400x240/232323/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+									<source srcset="http://placehold.it/1600x1200/242424/ffffff 2x, http://placehold.it/800x600/252525/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+									<source srcset="http://placehold.it/2048x1600/262626/ffffff 2x, http://placehold.it/1024x800/272727/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								</picture>
+							</div>
+							<div class="portfolio-item">
+								<picture class="portfolio-picture">
+									<source srcset="http://placehold.it/800x480/282828/ffffff 2x, http://placehold.it/400x240/292929/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+									<source srcset="http://placehold.it/1600x1200/303030/ffffff 2x, http://placehold.it/800x600/313131/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+									<source srcset="http://placehold.it/2048x1600/323232/ffffff 2x, http://placehold.it/1024x800/333333/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								</picture>
+							</div>
+							<div class="portfolio-item">
+								<picture class="portfolio-picture">
+									<source srcset="http://placehold.it/800x480/343434/ffffff 2x, http://placehold.it/400x240/353535/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+									<source srcset="http://placehold.it/1600x1200/363636/ffffff 2x, http://placehold.it/800x600/373737/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+									<source srcset="http://placehold.it/2048x1600/383838/ffffff 2x, http://placehold.it/1024x800/393939/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								</picture>
+							</div>
+						</div>
+						<h3>First project!</h3>
+						<p class="portfoilio-teaser">Super project description won't fit the small space given. So at some point i expect the ellipsis to kick in! Super project dSuper project description won't fit the small space given. So at some point i expect the ellipsis to kick in!escription won't fit the small space given. So at some point i expect the ellipsis to kick in! Super project description won't fit the small space given. So at some point i expect the ellipsis to kick in! Super project description won't fit the small space given. So at some point i expect the ellipsis to kick in! Super project description won't fit the small space given. So at some point i expect the ellipsis to kick in! Super project dSuper project description won't fit the small space given. So at some point i expect the ellipsis to kick in!escription won't fit the small space given. So at some point i expect the ellipsis to kick in! Super project description won't fit the small space given. So at some point i expect the ellipsis to kick in! Super project description won't fit the small space given. So at some point i expect the ellipsis to kick in! </p>
 
-			<div class="row">
-				<article class="col-xs-6 col-sm-4">
-					<figure>
-						<picture>
-							<source srcset="http://placehold.it/800x480 2x, http://placehold.it/400x240" type="image/jpeg" media="(max-width: 767px)" />
-							<source srcset="http://placehold.it/1600x1200 2x, http://placehold.it/800x600" type="image/jpeg" media="(max-width: 1023px)" />
-							<source srcset="http://placehold.it/2048x1600 2x, http://placehold.it/1024x800" type="image/jpeg" media="(min-width: 1024px)" />
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-						</picture>
-						<figcaption>
+					</article>
+					<article class="portfolio-article col-xs-6 col-sm-4">
+						<figure>
+							<picture class="portfolio-picture">
+								<source srcset="http://placehold.it/800x480/404040/ffffff 2x, http://placehold.it/400x240/414141/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+								<source srcset="http://placehold.it/1600x1200/424242/ffffff 2x, http://placehold.it/800x600/434343/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+								<source srcset="http://placehold.it/2048x1600/444444/ffffff 2x, http://placehold.it/1024x800/454545/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+							</picture>
+							<figcaption>
+								<h3>First Proj</h3>
+							</figcaption>
+						</figure>
+						<p>Super short description</p>
+
+					</article>
+					<article class="portfolio-article col-xs-6 col-sm-4">
+						<figure>
+							<picture class="portfolio-picture">
+								<source srcset="http://placehold.it/800x480/464646/ffffff 2x, http://placehold.it/400x240/474747/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+								<source srcset="http://placehold.it/1600x1200/484848/ffffff 2x, http://placehold.it/800x600/494949/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+								<source srcset="http://placehold.it/2048x1600/505050/ffffff 2x, http://placehold.it/1024x800/515151/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+							</picture>
+							<figcaption>
+								<h3>First Proj</h3>
+							</figcaption>
+						</figure>
+						<p>Super short description</p>
+
+					</article>
+					<article class="portfolio-article col-xs-6 col-sm-4">
+						<figure>
+							<picture class="portfolio-picture">
+								<source srcset="http://placehold.it/800x480/525252/ffffff 2x, http://placehold.it/400x240/535353/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+								<source srcset="http://placehold.it/1600x1200/545454/ffffff 2x, http://placehold.it/800x600/555555/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+								<source srcset="http://placehold.it/2048x1600/565656/ffffff 2x, http://placehold.it/1024x800/575757/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+							</picture>
+							<figcaption>
+								<h3>First Proj</h3>
+							</figcaption>
+						</figure>
+						<p>Super short description</p>
+
+					</article>
+					<article class="portfolio-article col-xs-6 col-sm-4">
+						<figure>
+							<picture class="portfolio-picture">
+								<source srcset="http://placehold.it/800x480/585858/ffffff 2x, http://placehold.it/400x240/595959/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+								<source srcset="http://placehold.it/1600x1200/606060/ffffff 2x, http://placehold.it/800x600/616161/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+								<source srcset="http://placehold.it/2048x1600/626262/ffffff 2x, http://placehold.it/1024x800/636363/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+							</picture>
+							<figcaption>
 							<h3>First Proj</h3>
-						</figcaption>
-					</figure>
-					<p>Super short description</p>
+							</figcaption>
+						</figure>
+						<p>Super short description</p>
 
-				</article>
-				<article class="col-xs-6 col-sm-4">
-					<figure>
-						<picture>
-							<source srcset="http://placehold.it/800x480 2x, http://placehold.it/400x240" type="image/jpeg" media="(max-width: 767px)" />
-							<source srcset="http://placehold.it/1600x1200 2x, http://placehold.it/800x600" type="image/jpeg" media="(max-width: 1023px)" />
-							<source srcset="http://placehold.it/2048x1600 2x, http://placehold.it/1024x800" type="image/jpeg" media="(min-width: 1024px)" />
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-						</picture>
-						<figcaption>
+					</article>
+					<article class="portfolio-article col-xs-6 col-sm-4">
+						<figure>
+							<picture class="portfolio-picture">
+								<source srcset="http://placehold.it/800x480/646464/ffffff 2x, http://placehold.it/400x240/656565/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+								<source srcset="http://placehold.it/1600x1200/666666/ffffff 2x, http://placehold.it/800x600/676767/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+								<source srcset="http://placehold.it/2048x1600/686868/ffffff 2x, http://placehold.it/1024x800/696969/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+							</picture>
+							<figcaption>
 							<h3>First Proj</h3>
-						</figcaption>
-					</figure>
-					<p>Super short description</p>
+							</figcaption>
+						</figure>
+						<p>Super short description</p>
 
-				</article>
-				<article class="col-xs-6 col-sm-4">
-					<figure>
-						<picture>
-							<source srcset="http://placehold.it/800x480 2x, http://placehold.it/400x240" type="image/jpeg" media="(max-width: 767px)" />
-							<source srcset="http://placehold.it/1600x1200 2x, http://placehold.it/800x600" type="image/jpeg" media="(max-width: 1023px)" />
-							<source srcset="http://placehold.it/2048x1600 2x, http://placehold.it/1024x800" type="image/jpeg" media="(min-width: 1024px)" />
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-						</picture>
-						<figcaption>
+					</article>
+					<article class="portfolio-article col-xs-6 col-sm-4">
+						<figure>
+							<picture class="portfolio-picture">
+								<source srcset="http://placehold.it/800x480/707070/ffffff 2x, http://placehold.it/400x240/717171/ffffff" type="image/jpeg" media="(max-width: 767px)" />
+								<source srcset="http://placehold.it/1600x1200/727272/ffffff 2x, http://placehold.it/800x600/737373/ffffff" type="image/jpeg" media="(max-width: 1023px)" />
+								<source srcset="http://placehold.it/2048x1600/747474/ffffff 2x, http://placehold.it/1024x800/757575/ffffff" type="image/jpeg" media="(min-width: 1024px)" />
+								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+							</picture>
+							<figcaption>
 							<h3>First Proj</h3>
-						</figcaption>
-					</figure>
-					<p>Super short description</p>
+							</figcaption>
+						</figure>
+						<p>Super short description</p>
 
-				</article>
-				<article class="col-xs-6 col-sm-4">
-					<figure>
-						<picture>
-							<source srcset="http://placehold.it/800x480 2x, http://placehold.it/400x240" type="image/jpeg" media="(max-width: 767px)" />
-							<source srcset="http://placehold.it/1600x1200 2x, http://placehold.it/800x600" type="image/jpeg" media="(max-width: 1023px)" />
-							<source srcset="http://placehold.it/2048x1600 2x, http://placehold.it/1024x800" type="image/jpeg" media="(min-width: 1024px)" />
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-						</picture>
-						<figcaption>
-							<h3>First Proj</h3>
-						</figcaption>
-					</figure>
-					<p>Super short description</p>
+					</article>
+				</div>
 
-				</article>
-				<article class="col-xs-6 col-sm-4">
-					<figure>
-						<picture>
-							<source srcset="http://placehold.it/800x480 2x, http://placehold.it/400x240" type="image/jpeg" media="(max-width: 767px)" />
-							<source srcset="http://placehold.it/1600x1200 2x, http://placehold.it/800x600" type="image/jpeg" media="(max-width: 1023px)" />
-							<source srcset="http://placehold.it/2048x1600 2x, http://placehold.it/1024x800" type="image/jpeg" media="(min-width: 1024px)" />
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-						</picture>
-						<figcaption>
-						<h3>First Proj</h3>
-						</figcaption>
-					</figure>
-					<p>Super short description</p>
+			</section>
 
-				</article>
-				<article class="col-xs-6 col-sm-4">
-					<figure>
-						<picture>
-							<source srcset="http://placehold.it/800x480 2x, http://placehold.it/400x240" type="image/jpeg" media="(max-width: 767px)" />
-							<source srcset="http://placehold.it/1600x1200 2x, http://placehold.it/800x600" type="image/jpeg" media="(max-width: 1023px)" />
-							<source srcset="http://placehold.it/2048x1600 2x, http://placehold.it/1024x800" type="image/jpeg" media="(min-width: 1024px)" />
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-						</picture>
-						<figcaption>
-						<h3>First Proj</h3>
-						</figcaption>
-					</figure>
-					<p>Super short description</p>
+		</main>
 
-				</article>
-				<article class="col-xs-6 col-sm-4">
-					<figure>
-						<picture>
-							<source srcset="http://placehold.it/800x480 2x, http://placehold.it/400x240" type="image/jpeg" media="(max-width: 767px)" />
-							<source srcset="http://placehold.it/1600x1200 2x, http://placehold.it/800x600" type="image/jpeg" media="(max-width: 1023px)" />
-							<source srcset="http://placehold.it/2048x1600 2x, http://placehold.it/1024x800" type="image/jpeg" media="(min-width: 1024px)" />
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-						</picture>
-						<figcaption>
-						<h3>First Proj</h3>
-						</figcaption>
-					</figure>
-					<p>Super short description</p>
+		<footer class="container">
 
-				</article>
-			</div>
-
-		</section>
-
-	</main>
-
-	<footer class="container">
-
-	</footer>
+		</footer>
 
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.js"></script>
 <!-- endbower -->
-</body>
+<script src="js/main.js"></script>
+<script src="bower_components/clamp-js/clamp.min.js"></script>
+	</body>
 </html>

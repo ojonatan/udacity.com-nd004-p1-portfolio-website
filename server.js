@@ -7,10 +7,6 @@ var methodOverride = require('method-override');
 
 var httpServer = require("http").createServer(app);
 
-
-// config files
-var db = require('./config/db');
-
 // set our port
 var port = 3000;
 
