@@ -4,6 +4,7 @@
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.0",
+    "express": "^4.14.1",
     "grunt-bower-install": "^1.6.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
