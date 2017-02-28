@@ -1,17 +1,18 @@
 var options = {
 	loaded: false
 };
+
+function checkLoaded(){
+	return ($('.portfolio-picture img').length == $('.portfolio-picture img.image-loaded').length);
+}
+
 function equalizeHeight(c_ITEMS) {
-console.log("PROOROR");
 	var i_tallest = 0;
 	c_ITEMS.each(function() {
 		var i_height = 0;
-console.log("ART " + 		$(this).outerHeight(true));
 		$(this).children().each(function(){
-console.log("Found " + 		$(this).outerHeight(true));
 			i_height += $(this).outerHeight(true);
 		});
-console.log("HEIGHT EL " + 	i_height);
 		if(i_height > i_tallest) {
 			i_tallest = i_height;
 		}
@@ -30,17 +31,19 @@ $(document).ready(function(){
 	});
 
 	$('.portfolio-img').on('load',function(event){
+		var loaded = options.loaded;
 		$(this).removeClass('image-loading');
 		$(this).addClass('image-loaded');
-console.log($('.portfolio-picture img').length+"/"+ $('.portfolio-picture img.image-loaded').length);
-console.log($('.portfolio-img').length+"---/"+ $('.image-loaded').length);
-console.log(":::"+options.loaded);
+
+		options.loaded = ($('.portfolio-picture img').length == $('.portfolio-picture img.image-loaded').length);
+		if(options.loaded != loaded){
+			equalizeHeight($('.portfolio-article'));
+		}
 	});
 	$(window).resize();
 });
 
 $(window).resize(function(){
-		console.log($('.portfolio-img').length+"/"+ $('.image-loaded').length);
 	$('.portfoilio-teaser').each(function(i){
 		$clamp(
 			this,
@@ -54,10 +57,9 @@ $(window).resize(function(){
 		console.log($(this).height());
 	});
 	if(!options.loaded){
-		options.loaded = ($('.portfolio-picture img').length == $('.portfolio-picture img.image-loaded').length);
+		options.loaded = checkLoaded();
 	}
 	if(options.loaded){
-console.log("ssssssssssss");
 		equalizeHeight($('.portfolio-article'));
 	}
 });
