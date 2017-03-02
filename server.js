@@ -25,12 +25,8 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 //set the public folder of the app
 app.use(express.static(__dirname + '/public'));
 
-//load basic route for server
-require('./server/routes/basic')(app);
-
 // startup our app at http://localhost:3000
 httpServer.listen(port);
-
 
 // shoutout to the user
 console.log('Server available at http://localhost:' + port);

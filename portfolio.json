@@ -1,0 +1,32 @@
+[
+	{
+		"title": "dodenhof",
+		"text": "A german retailer. As a frontend developer my job was to implement changes in close cooperation with the digital agency and the backend team neusta, locted in Bremen. The work consisted mostly on implementing draft designs and improving existing modules.",
+		"images": ["dodenhof.01.jpg"]
+	},
+	{
+		"title": "Ragnar\u00f6k Merchant Calculator",
+		"text": "Decades ago a free MMORP in it's early stages allowed for free exploration and adventure.  A dedicated website offered quick insights and handy tool for quick calculations.",
+		"images": ["yakumooks.01.jpg","yakumooks.02.jpg","yakumooks.03.jpg"]
+	},
+	{
+		"title": "Movie list",
+		"text": "Based on a responsive template my task was to extand a movie listing site using the freshly acquired skills from the python programming language course. But beware - some of them are genuine german or even french. Subtitles might come in handy.",
+		"images": ["movies.01.jpg"]
+	},
+	{
+		"title": "Logos",
+		"text": "Some logos I have designed over time. From an online furniture retailer to a spanish language school. I use CorelDRAW! for vector image design back in the days. Some Logos, eg. the Cityflowers ankh were originally drawn on an Comodore Amiga 500 on a program called Deluxe Paint.",
+		"images": ["logo-cityflowers-black-4x3.png","logo-myflair-4x3.png"]
+	},
+	{
+		"title": "FX Retailer website",
+		"text": "Most of my professional live i have spent developing web solutions for a german FX retailer. The frontend was a Typo3 website.",
+		"images": ["varengoldbankfx.01.jpg"]
+	},
+	{
+		"title": "KDB",
+		"text": "The fully featured customer onboarding solution was originally developed in PHP3 in 2006. Refactoring and performance improvement were the centerpieces of my work untill summer 2016. The project was terminated and all resources went offline.",
+		"images": ["kdb.01.png"]
+	}
+]

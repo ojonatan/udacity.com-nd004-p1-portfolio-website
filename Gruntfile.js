@@ -88,7 +88,7 @@ module.exports = function(grunt){
 							name: "large",
 							width: 2048,
 							separator: "-",
-							suffix: "_x2",
+							suffix: "_2x",
 							quality: 60
 						}
 					]
@@ -100,7 +100,7 @@ module.exports = function(grunt){
 				*/
 				files: [{
 					expand: true,
-					src: ['*.{gif,jpg,png}'],
+					src: ['*.{jpg,png}'],
 					cwd: 'images_src/',
 					dest: 'images_responsive/'
 				}]
@@ -110,7 +110,7 @@ module.exports = function(grunt){
 		/* Clear out the images directory if it exists */
 		clean: {
 			dev: {
-				src: ['public/img'],
+				src: ['public/img/*'],
 			}
 		},
 

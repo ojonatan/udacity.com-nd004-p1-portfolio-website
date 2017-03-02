@@ -1,6 +1,7 @@
 {
   "name": "udacity.com-nd004-p1-portfolio-website",
   "main": "server.js",
+  "repository": "https://github.com/ojonatan/udacity.com-nd004-p1-portfolio-website.git",
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.0",
