@@ -57,6 +57,18 @@ module.exports = function(grunt){
 				overrides: {}
 			}
 		},
+
+		copy: {
+			dev: {
+				files: [{
+					expand: true,
+					flatten: true,
+					src: 'images_src/prepared/*.{gif,jpg,png,svg}',
+					dest: 'public/img'
+				}]
+			},
+		},
+
 		responsive_images: {
 			dev: {
 				options: {
@@ -145,8 +157,7 @@ module.exports = function(grunt){
 				files: {
 					'public/css/slick-theme.css': 'less/slick-theme.less',
 					'public/css/slick.css': 'less/slick.less',
-					'public/css/bootstrap.css': 'less/bootstrap.custom.less',
-					'public/css/main.css': 'less/main.less'
+					'public/css/bootstrap.css': 'less/bootstrap.custom.less'
 				}
 			}
 		},
@@ -168,7 +179,7 @@ module.exports = function(grunt){
 		}
 	});
 	grunt.registerTask('server',['express','watch']);
-	grunt.registerTask('default', ['clean', 'mkdir', 'responsive_images', 'imagemin']);
+	grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images', 'imagemin']);
 
 };
 

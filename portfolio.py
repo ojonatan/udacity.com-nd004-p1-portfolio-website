@@ -11,37 +11,36 @@ template_source = '''{indention}<source srcset="{images}" type="{type}" media="{
 template_picture = '''
 {indention}<picture class="portfolio-picture">
 {sources}
-{indention}    <img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+{indention}{t}<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 {indention}</picture>
 '''
 
 template_article_single_image = '''
-<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4" data-toggle="modal" data-target="#more-info">
-    <figure>
-        {picture}
-        <figcaption>
-            <h3>{title}</h3>
-        </figcaption>
-    </figure>
-    <p class="portfoilio-teaser portfoilio-text">{text}</p>
-</article>
+{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4" data-toggle="modal" data-target="#more-info">
+{t}{t}{t}{t}{t}{t}<figure>
+{picture}
+{t}{t}{t}{t}{t}{t}{t}<figcaption>
+{t}{t}{t}{t}{t}{t}{t}{t}<h3>{title}</h3>
+{t}{t}{t}{t}{t}{t}{t}</figcaption>
+{t}{t}{t}{t}{t}{t}</figure>
+{t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
+{t}{t}{t}{t}{t}</article>
 '''
 
 template_portfolio_item = '''
-        <div class="portfolio-item">
-            {picture}
-        </div>
+{t}{t}{t}{t}{t}{t}{t}<div class="portfolio-item">
+{picture}
+{t}{t}{t}{t}{t}{t}{t}</div>
 '''
 
 template_article_multiple_images = '''
-<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4" data-toggle="modal" data-target="#more-info">
-    <div class="slick-slider">
-        {portfolio_items}
-    </div>
-    <h3>{title}</h3>
-    <p class="portfoilio-teaser portfoilio-text">{text}</p>
-</article>
-
+{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4" data-toggle="modal" data-target="#more-info">
+{t}{t}{t}{t}{t}{t}<div class="slick-slider">
+{portfolio_items}
+{t}{t}{t}{t}{t}{t}</div>
+{t}{t}{t}{t}{t}{t}<h3>{title}</h3>
+{t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
+{t}{t}{t}{t}{t}</article>
 '''
 
 dpr = 2
@@ -118,23 +117,27 @@ for portfolio in portfolio_list:
                     images=", ".join(picture["sources"][source]["images"]),
                     type=picture["type"],
                     media=picture["sources"][source]["media"],
-                    indention="                "
+                    indention="\t\t\t\t\t\t\t\t\t",
+                    t="\t"
                 )
             
             html_picture = template_picture.format(
                 sources=html_sources,
-                indention="            "
+                indention="\t\t\t\t\t\t\t\t",
+                t="\t"
             )
 
             html_portfolio_items += template_portfolio_item.format(
                 picture=html_picture,
-                indention="\t\t\t"            
+                indention="\t\t\t" ,
+                t="\t"           
             )
 
         html_portfolio += template_article_multiple_images.format(
             portfolio_items=html_portfolio_items,
             title=portfolio["title"].encode("utf-8").strip(),
-            text=portfolio["text"]
+            text=portfolio["text"],
+            t="\t"
         )
             
     else:
@@ -144,25 +147,27 @@ for portfolio in portfolio_list:
                 images=", ".join(portfolio["pictures"][0]["sources"][source]["images"]),
                 type=picture["type"],
                 media=picture["sources"][source]["media"],
-                indention="             "
+                indention="\t\t\t\t\t\t\t\t"
             )
 
         html_picture = template_picture.format(
             sources=html_sources,
-            indention="         "
+            indention="\t\t\t\t\t\t\t",
+            t="\t"
         )
         
         html_portfolio += template_article_single_image.format(
             picture=html_picture,
             title=portfolio["title"].encode("utf-8").strip(),
-            text=portfolio["text"]
+            text=portfolio["text"],
+            t="\t"
         )
 
 index_html = "public/index.html"
 template = open(index_html).read()
-chunks = template.split("<!--- portfolio_marker -->");
+chunks = template.split("\n<!--- portfolio_marker -->\n");
 chunks[1] = html_portfolio;
     
 index_file = open(index_html,"w+") 
-index_file.write("<!--- portfolio_marker -->".join(chunks)) 
+index_file.write("\n<!--- portfolio_marker -->\n".join(chunks)) 
 index_file.close()

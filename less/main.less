@@ -1,5 +1,6 @@
 @portfolio-text-line-height: 2em;
 @portfolio-teaser-line-count: 3;
+@modal-padding: 15px;
 
 * {
 	box-sizing: border-box;
@@ -20,24 +21,27 @@ section {
 	display: block;
 }
 
-.teaser img
-{
-	width: 100%;
-}
 
-img
-{
+img {
 	max-width: 100%;
 }
 
-article img
-{
-	max-width: 100%;
-}
-
-article
-{
+footer {
+	padding: 15px 0;
 	text-align: center;
+	font-size: 0.8em;	
+}
+
+article {
+	text-align: center;
+}
+
+article img {
+	max-width: 100%;
+}
+
+.teaser img {
+	width: 100%;
 }
 
 .header-row {
@@ -58,6 +62,7 @@ article
 	width: 100%;
 
 }
+
 .name {
 	width: 50%;
 	display: flex;
@@ -91,10 +96,6 @@ article
 }
 
 @media screen and (max-width: 767px) {
-	article
-	{
-//		height: 300px;
-	}
 	header,
 	main,
 	footer {
@@ -108,10 +109,6 @@ article
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	article
-	{
-//		height: 300px;
-	}
 	header,
 	main,
 	footer {
@@ -125,10 +122,6 @@ article
 }
 
 @media screen and (min-width: 1024px) {
-	article
-	{
-//		height: 400px;
-	}
 	header,
 	main,
 	footer {
@@ -175,50 +168,45 @@ article
 	bottom: 0;
 }
 
-.image-loaded
-{
-//border: 1px solid red;
-}
-
-
 /* mixin for multiline */
 
 .multiLineEllipsis(@lineHeight: 1.2em, @lineCount: 1, @bgColor: white){
-  overflow: hidden;
-  position: relative;
-  line-height: @lineHeight;
-  max-height: (@lineHeight * @lineCount); 
-  text-align: justify;
-  margin-right: -1em;
-  padding-right: 1em;
-  &:before {
-    content: '...';
-    padding-left: 0.5em;
-    position: absolute;
-    right: 1em;
-    bottom: 0;
+	overflow: hidden;
+	position: relative;
+	line-height: @lineHeight;
+	max-height: (@lineHeight * @lineCount); 
+	text-align: justify;
+	margin-right: -1em;
+	padding-right: 1em;
+	&:before {
+		content: '...';
+		padding-left: 0.5em;
+		position: absolute;
+		right: 1em;
+		bottom: 0;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+29&0+0,1+28 */
-background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 28%, rgba(255,255,255,1) 29%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 28%,rgba(255,255,255,1) 29%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 28%,rgba(255,255,255,1) 29%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 1em;
-    height: 1em;
-    margin-top: 0.2em;
-  }
+		background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 28%, rgba(255,255,255,1) 29%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 28%,rgba(255,255,255,1) 29%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 28%,rgba(255,255,255,1) 29%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 1em;
+		height: 1em;
+		margin-top: 0.2em;
+	}
 }
 
-.portfoilio-text {
+.portfolio-text {
 	line-height: @portfolio-text-line-height;
 	text-align: justify;
+	margin-bottom: 15px;
 }
 
-.portfoilio-teaser {
+.portfolio-teaser {
 	.multiLineEllipsis(
 		@portfolio-text-line-height,
 		@portfolio-teaser-line-count,
@@ -226,11 +214,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	);  
 }
 
+.slick-slider {
+	background: transparent url(../img/squares.svg) center center no-repeat;
+
+}
+
 .slick-slider .portfolio-item img
 {
 	visibility: hidden;
 }
-
 .slick-slider.initiated .portfolio-item img
 {
 	visibility: visible;
@@ -238,5 +230,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 .modal-content
 {
-	padding: 15px;
+	padding: @modal-padding;
 }
+
+@media screen and (max-width: @screen-sm-min) {
+	.modal-content .slick-slider
+	{
+		min-height: ~"calc( ( 100vw - @modal-padding ) / 1.3 )";
+	}
+}
+
+
+@media screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+	.modal-content .slick-slider
+	{
+		min-height: ( ( @modal-md - (@modal-padding * 2) ) / 1.3 );
+	}
+}
+
+@media screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+	.modal-content .slick-slider
+	{
+		min-height: ( ( @modal-lg - (@modal-padding * 2) ) / 1.3 );
+	}
+}
+
+@media screen and (min-width: @screen-lg-min) {
+	.modal-content .slick-slider
+	{
+		min-height: ( ( @modal-lg - (@modal-padding * 2) ) / 1.3 );
+	}
+}
+
+
+
+
+

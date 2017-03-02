@@ -21,7 +21,7 @@
 	},
 	{
 		"title": "FX Retailer website",
-		"text": "Most of my professional live i have spent developing web solutions for a german FX retailer. The frontend was a Typo3 website.",
+		"text": "Most of my professional live I have spent developing web solutions for a german FX retailer. The frontend was a Typo3 website. Since the customer signup process was running on a server located onsite of the customers, the data center hosted Typo3 site had to be extended by wrapping and special caching mechanisms.",
 		"images": ["varengoldbankfx.01.jpg"]
 	},
 	{

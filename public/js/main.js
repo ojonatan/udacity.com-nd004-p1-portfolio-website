@@ -3,16 +3,16 @@ var options = {
 	single: false
 };
 
-function checkLoaded(){
-	return ($('.portfolio-picture img').length == $('.portfolio-picture img.image-loaded').length);
-}
-
 var imgs = document.querySelectorAll('img.image-loading');
 var i;
 for(i = 0; i < imgs.length; ++i) {
 	imgs[i].src = imgs[i].getAttribute('data-foo');
 	imgs[i].setAttribute('onload',"this.setAttribute('class','image-loaded');");
 	imgs[i].removeAttribute('data-src');
+}
+
+function checkLoaded(){
+	return ($('.portfolio-picture img').length == $('.portfolio-picture img.image-loaded').length);
 }
 
 function initSlider(o_SLIDER) {
@@ -40,7 +40,6 @@ function equalizeHeight(c_ITEMS) {
 	c_ITEMS.each(function() {
 		var i_height = 0;
 		$(this).children().each(function(){
-			console.log($(this).prop('tagName'));
 			i_height += $(this).outerHeight(true);
 			$(this).data('height',$(this).outerHeight(true));
 		});
@@ -48,14 +47,12 @@ function equalizeHeight(c_ITEMS) {
 			i_tallest = i_height;
 		}
 		if(options.single) {
-console.log("Single prop. " + $(this).prop('tagName') + ": " + i_height);
 			$(this).height(i_height);
 		}
 		$(this).data('xheight',i_height);
 	});
 
 	if(!options.single){
-console.log("Applying " + i_tallest + " to ll");
 		c_ITEMS.height(i_tallest);
 	}
 }
@@ -93,7 +90,7 @@ $(document).ready(function(){
 		$(event.relatedTarget).find('.slick-slider').each(function(){
 			initSlider(this);
 		});
-		$('#more-info p').removeClass('portfoilio-teaser');
+		$('#more-info p').removeClass('portfolio-teaser');
 	});
 });
 
