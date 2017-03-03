@@ -36,9 +36,6 @@ of this project.
 * Less watcher is painfully slow on my Laptop. 20 seconds from changing .less
 files until live reload kicks in.
 
-* Slick slider loading behaviour still not optimal. Invisible elements acquire the
-space vertically before being sucked into place by the initialized slick slider.
-
 ## Installation
 
 ```
@@ -49,4 +46,4 @@ grunt server
 
 ## Version
 
-2017-03-03T10:04:24.368000
+2017-03-03T11:11:53.231000

@@ -90,6 +90,7 @@ article img {
 .span-s {
 	font-size: 80px;
 	font-weight: 100;
+	color: #7d97ad;
 }
 
 .span-s
@@ -214,7 +215,7 @@ article img {
 .portfolio-text {
 	line-height: @portfolio-text-line-height;
 	text-align: justify;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 
 .portfolio-teaser {
@@ -234,9 +235,19 @@ article img {
 {
 	visibility: hidden;
 }
+
 .slick-slider.initiated .portfolio-item img
 {
 	visibility: visible;
+}
+
+.slick-slider .portfolio-item {
+	display: none;
+}
+
+.slick-slider .portfolio-item:first-child,
+.slick-slider.initiated .portfolio-item {
+	display: block;
 }
 
 .modal-content
@@ -250,7 +261,7 @@ article img {
 		min-height: ( ( @modal-md - (@modal-padding * 2) ) / 1.3 );
 	}
 	.portfolio-text {
-		margin-bottom: 25px;
+		margin-bottom: 40px;
 	}
 }
 

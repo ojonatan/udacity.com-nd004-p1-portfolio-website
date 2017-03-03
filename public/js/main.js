@@ -59,6 +59,9 @@ function equalizeHeight(c_ITEMS) {
 
 $(document).ready(function(){
 
+	$('.slick-slider').on('click', function (event) {
+		event.stopPropagation();
+	});
 	$('.slick-slider').each(function(){
 		initSlider(this);
 	});
