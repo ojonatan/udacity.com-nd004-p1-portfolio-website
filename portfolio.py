@@ -18,7 +18,10 @@ template_picture = '''
 template_article_single_image = '''
 {t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
 {t}{t}{t}{t}{t}{t}<figure>
+{t}{t}{t}{t}{t}{t}{t}<div class="porfolio-picture-wrapper">
+{t}{t}{t}{t}{t}{t}{t}{t}<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
 {picture}
+{t}{t}{t}{t}{t}{t}{t}</div>
 {t}{t}{t}{t}{t}{t}{t}<figcaption>
 {t}{t}{t}{t}{t}{t}{t}{t}<h3>{title}</h3>
 {t}{t}{t}{t}{t}{t}{t}</figcaption>
@@ -36,6 +39,7 @@ template_portfolio_item = '''
 
 template_article_multiple_images = '''
 {t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+{t}{t}{t}{t}{t}{t}<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
 {t}{t}{t}{t}{t}{t}<div class="slick-slider">
 {portfolio_items}
 {t}{t}{t}{t}{t}{t}</div>
@@ -152,13 +156,13 @@ for portfolio in portfolio_list:
                 images=", ".join(portfolio["pictures"][0]["sources"][source]["images"]),
                 type=picture["type"],
                 media=picture["sources"][source]["media"],
-                indention="\t\t\t\t\t\t\t\t"
+                indention="\t\t\t\t\t\t\t\t\t"
             )
 
         html_picture = template_picture.format(
             sources=html_sources,
             alt=portfolio["title"].encode("utf-8").strip(),
-            indention="\t\t\t\t\t\t\t",
+            indention="\t\t\t\t\t\t\t\t",
             t="\t"
         )
         
