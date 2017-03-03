@@ -11,7 +11,7 @@ template_source = '''{indention}<source srcset="{images}" type="{type}" media="{
 template_picture = '''
 {indention}<picture class="portfolio-picture">
 {sources}
-{indention}{t}<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+{indention}{t}<img alt="{alt}" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 {indention}</picture>
 '''
 
@@ -110,7 +110,9 @@ html_portfolio = ""
 for portfolio in portfolio_list:
     if len(portfolio["pictures"]) > 1:
         html_portfolio_items = ""
+        i = 0
         for picture in portfolio["pictures"]:
+            i = i + 1
             html_sources = ""
             for source in picture["sources"]:
                 html_sources += template_source.format(
@@ -123,6 +125,7 @@ for portfolio in portfolio_list:
             
             html_picture = template_picture.format(
                 sources=html_sources,
+                alt=portfolio["title"].encode("utf-8").strip() + " (" + str(i) + ")",
                 indention="\t\t\t\t\t\t\t\t",
                 t="\t"
             )
@@ -152,6 +155,7 @@ for portfolio in portfolio_list:
 
         html_picture = template_picture.format(
             sources=html_sources,
+            alt=portfolio["title"].encode("utf-8").strip(),
             indention="\t\t\t\t\t\t\t",
             t="\t"
         )

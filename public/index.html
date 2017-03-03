@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="Udacity Portfolio Website" />
 		<meta name="author" content="//o.cx">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-		<meta itemprop="name" content="Udacity Portfolio Website">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta id="theme-color" name="theme-color" content="#307699"> <!-- TODO -->
-		<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Fjalla+One" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Crimson+Text%7CFjalla+One" rel="stylesheet">
 		<base target="_blank">
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/slick.css" />
@@ -24,22 +23,24 @@
 					<p class="name-subline">Web Developer</p>
 				</div>
 			</div>
-			<div class="hr" />
-		</header>
+			<div class="hr"></div>
 
-		<main class="container">
-			<section class="teaser">
+			<div class="teaser">
 				<picture>
 					<source srcset="img/rainbow-background-1149610_crop-small_2x.jpg 2x, img/rainbow-background-1149610_crop-small.jpg 1x" type="image/jpeg" media="(max-width: 320px)" />
 					<source srcset="img/rainbow-background-1149610_1920-medium_2x.jpg 2x, img/rainbow-background-1149610_1920-medium.jpg 1x" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
 					<source srcset="img/rainbow-background-1149610_1920-large_2x.jpg 2x, img/rainbow-background-1149610_1920-large.jpg 1x" type="image/jpeg" media="(min-width: 1024px)" />
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+					<img alt="A winded road leads into a rainbow" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 				</picture>
-			</section>
+
+			</div>
+		</header>
+
+		<main class="container">
 
 			<section class="portfolio">
 
-				<h2>Featured Work</h2>
+				<h2 id="heading-portfolio">Featured Work</h2>
 				<div class="row">
 
 <!--- portfolio_marker -->
@@ -52,7 +53,7 @@
 								<source srcset="img/dodenhof.01-large.jpg" type="image/png" media="(min-width: 1024px)" />
 								<source srcset="img/dodenhof.01-medium.jpg" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
 
-								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								<img alt="dodenhof" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 							</picture>
 
 							<figcaption>
@@ -72,7 +73,7 @@
 									<source srcset="img/yakumooks.01-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
 									<source srcset="img/yakumooks.01-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
 
-									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									<img alt="Ragnarök Merchant Calculator (1)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 								</picture>
 
 							</div>
@@ -84,7 +85,7 @@
 									<source srcset="img/yakumooks.02-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
 									<source srcset="img/yakumooks.02-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
 
-									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									<img alt="Ragnarök Merchant Calculator (2)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 								</picture>
 
 							</div>
@@ -96,14 +97,14 @@
 									<source srcset="img/yakumooks.03-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
 									<source srcset="img/yakumooks.03-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
 
-									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									<img alt="Ragnarök Merchant Calculator (3)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 								</picture>
 
 							</div>
 
 						</div>
 						<h3>Ragnarök Merchant Calculator</h3>
-						<p class="portfolio-teaser portfolio-text">Decades ago a free MMORP in it's early stages allowed for free exploration and adventure.  A dedicated website offered quick insights and handy tool for quick calculations. It features a searchengine for monsters and their droppings as well as a map of the area generated from tiles and a mepping of their respective interconnections.</p>
+						<p class="portfolio-teaser portfolio-text">Decades ago a free MMORP in it's early stages allowed for free exploration and adventure. A dedicated website offered quick insights and handy tool for quick calculations. It features a searchengine for monsters and their droppings as well as a map of the area generated from tiles and a mepping of their respective interconnections.</p>
 					</article>
 
 					<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4" data-toggle="modal" data-target="#more-info">
@@ -114,7 +115,7 @@
 								<source srcset="img/movies.01-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
 								<source srcset="img/movies.01-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
 
-								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								<img alt="Movie list" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 							</picture>
 
 							<figcaption>
@@ -134,7 +135,7 @@
 									<source srcset="img/logo-cityflowers-black-4x3-large.png" type="image/png" media="(min-width: 1024px)" />
 									<source srcset="img/logo-cityflowers-black-4x3-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
 
-									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									<img alt="Logos (1)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 								</picture>
 
 							</div>
@@ -146,7 +147,7 @@
 									<source srcset="img/logo-myflair-4x3-large.png, img/logo-myflair-4x3-large_2x.png 2x" type="image/png" media="(min-width: 1024px)" />
 									<source srcset="img/logo-myflair-4x3-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
 
-									<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									<img alt="Logos (2)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 								</picture>
 
 							</div>
@@ -164,7 +165,7 @@
 								<source srcset="img/varengoldbankfx.01-large.jpg" type="image/png" media="(min-width: 1024px)" />
 								<source srcset="img/varengoldbankfx.01-medium.jpg" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
 
-								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								<img alt="FX Retailer website" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 							</picture>
 
 							<figcaption>
@@ -182,7 +183,7 @@
 								<source srcset="img/kdb.01-large.png" type="image/png" media="(min-width: 1024px)" />
 								<source srcset="img/kdb.01-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
 
-								<img class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+								<img alt="KDB" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 							</picture>
 
 							<figcaption>
@@ -194,7 +195,7 @@
 
 <!--- portfolio_marker -->
 
-					<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+					<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="heading-portfolio">
 						<div class="modal-dialog modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-showcase"></div>
@@ -209,7 +210,8 @@
 		</main>
 
 		<footer class="container">
-			Oliver Schleede in 2017 for Udacity <a href="http://udacity.com">udacity.com</a>
+			<p>Oliver Schleede in 2017 for Udacity <a href="http://udacity.com">udacity.com</a></p>
+			<img alt="W3C valid HTML 4.01" src="http://www.w3.org/Icons/valid-html401-blue.png" /> <img alt="W3C valid XHTML 1.0" src="http://www.w3.org/Icons/valid-xhtml10-blue.png" />
 		</footer>
 
 <!-- bower:js -->
