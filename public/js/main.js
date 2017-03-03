@@ -80,17 +80,17 @@ $(document).ready(function(){
 	equalizeHeight($('.portfolio-article'));
 
 	$(document).on('show.bs.modal',function(event){
-		$(event.relatedTarget).find('.slick-slider').first().each(function(){
+		$(event.relatedTarget).parent('article').find('.slick-slider').first().each(function(){
 			$(this).slick("unslick");
 			$(this).attr("class","slick-slider");
 		});
 
-		var context = $(event.relatedTarget).clone();
+		var context = $(event.relatedTarget).parent('article').clone();
 		$('#more-info .modal-showcase').html($(context).html());
 		$('#more-info .modal-showcase .slick-slider').first().each(function(){
 			initSlider(this);
 		});
-		$(event.relatedTarget).find('.slick-slider').each(function(){
+		$(event.relatedTarget).parent('article').find('.slick-slider').each(function(){
 			initSlider(this);
 		});
 		$('#more-info p').removeClass('portfolio-teaser');

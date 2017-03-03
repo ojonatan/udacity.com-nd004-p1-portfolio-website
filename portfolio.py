@@ -16,7 +16,7 @@ template_picture = '''
 '''
 
 template_article_single_image = '''
-{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4" data-toggle="modal" data-target="#more-info">
+{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
 {t}{t}{t}{t}{t}{t}<figure>
 {picture}
 {t}{t}{t}{t}{t}{t}{t}<figcaption>
@@ -24,6 +24,7 @@ template_article_single_image = '''
 {t}{t}{t}{t}{t}{t}{t}</figcaption>
 {t}{t}{t}{t}{t}{t}</figure>
 {t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
+{t}{t}{t}{t}{t}{t}<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
 {t}{t}{t}{t}{t}</article>
 '''
 
@@ -34,12 +35,13 @@ template_portfolio_item = '''
 '''
 
 template_article_multiple_images = '''
-{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4" data-toggle="modal" data-target="#more-info">
+{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
 {t}{t}{t}{t}{t}{t}<div class="slick-slider">
 {portfolio_items}
 {t}{t}{t}{t}{t}{t}</div>
 {t}{t}{t}{t}{t}{t}<h3>{title}</h3>
 {t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
+{t}{t}{t}{t}{t}{t}<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
 {t}{t}{t}{t}{t}</article>
 '''
 

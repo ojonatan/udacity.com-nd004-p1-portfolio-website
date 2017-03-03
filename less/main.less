@@ -13,6 +13,7 @@ body {
 	font-size: 16px;
 }
 
+button,
 h1,
 h2,
 h3,
@@ -41,7 +42,6 @@ footer {
 
 article {
 	text-align: center;
-	cursor: pointer;
 }
 
 article img {
@@ -215,6 +215,11 @@ article img {
 .portfolio-text {
 	line-height: @portfolio-text-line-height;
 	text-align: justify;
+	margin-bottom: 15px;
+}
+
+.portfolio-more {
+	
 	margin-bottom: 30px;
 }
 
@@ -253,6 +258,9 @@ article img {
 .modal-content
 {
 	padding: @modal-padding;
+	.portfolio-more {
+		display: none;
+	}
 }
 
 @media screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
@@ -260,7 +268,7 @@ article img {
 	{
 		min-height: ( ( @modal-md - (@modal-padding * 2) ) / 1.3 );
 	}
-	.portfolio-text {
+	.portfolio-more {
 		margin-bottom: 40px;
 	}
 }
@@ -270,7 +278,7 @@ article img {
 	{
 		min-height: ( ( @modal-lg - (@modal-padding * 2) ) / 1.3 );
 	}
-	.portfolio-text {
+	.portfolio-more {
 		margin-bottom: 50px;
 	}
 }
@@ -280,7 +288,7 @@ article img {
 	{
 		min-height: ( ( @modal-lg - (@modal-padding * 2) ) / 1.3 );
 	}
-	.portfolio-text {
+	.portfolio-more {
 		margin-bottom: 50px;
 	}
 }
