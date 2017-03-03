@@ -1,6 +1,6 @@
 # FSND P1 - Portfolio Website Project
 
-A Portfolio Site based on a design mockup PDF
+A Portfolio Site based on a design mockup PDF.
 
 ## Highlights
 
@@ -15,13 +15,13 @@ banner image.
 * Ellipsis feature to symbolize clipped texts
 
 * Complete *Grunt* workflow to streamline all relevant tasks, e.g. image
-optimization, CSS and JS optimization
+optimization, CSS and JS optimization.
 
 * Python tool to generate portfolio items from a JSON file. Helps to eliminate
-redundant sources
+redundant sources.
 
 * Equalizer fixes article heights tackling the problem of `onload` events
-not fired for cached images
+not fired for cached images.
 
 ## Know limitations
 
@@ -36,6 +36,9 @@ of this project.
 * Less watcher is painfully slow on my Laptop. 20 seconds from changing .less
 files until live reload kicks in.
 
+* W3C Jigsaw validation for the CSS files fails both for *Slick.js* and *Bootstrap*
+in it's native code.
+
 ## Installation
 
 ```
@@ -46,4 +49,4 @@ grunt server
 
 ## Version
 
-2017-03-03T11:50:34.920000
+2017-03-03T11:53:53.902000
