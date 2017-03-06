@@ -2,238 +2,244 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="description" content="Udacity Portfolio Website" />
+		<meta name="description" content="Udacity Portfolio Website">
 		<meta name="author" content="//o.cx">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta id="theme-color" name="theme-color" content="#307699"> <!-- TODO -->
 		<link href="https://fonts.googleapis.com/css?family=Crimson+Text%7CFjalla+One" rel="stylesheet">
 		<base target="_blank">
-		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/slick.css" />
-		<link rel="stylesheet" href="css/slick-theme.css" />
+		<link rel="stylesheet" href="css/bootstrap.wrapper.css">
+		<link rel="stylesheet" href="css/slick.wrapper.css">
+		<link rel="stylesheet" href="css/slick-theme.wrapper.css">
 		<title>Oliver Schleede - Portfolio Site</title>
 	</head>
 	<body>
-		<header class="container">
-			<div class="row header-row">
-				<div class="logo"><span class="span-o">O</span><span class="span-s">S</span></div>
-				<div class="name">
-					<h1>Oliver Schleede</h1>
-					<p class="name-subline">Web Developer</p>
+		<div class="container-fluid">
+			<header>
+				<div class="row header-row">
+					<div class="col-xs-6 logo"><span class="span-o">O</span><span class="span-s">S</span></div>
+					<div class="col-xs-6 name">
+						<h1>Oliver Schleede</h1>
+						<p class="name-subline">Web Developer</p>
+					</div>
 				</div>
-			</div>
-			<div class="hr"></div>
-
-			<div class="teaser">
-				<picture>
-					<source srcset="img/rainbow-background-1149610_crop-small_2x.jpg 2x, img/rainbow-background-1149610_crop-small.jpg 1x" type="image/jpeg" media="(max-width: 320px)" />
-					<source srcset="img/rainbow-background-1149610_1920-medium_2x.jpg 2x, img/rainbow-background-1149610_1920-medium.jpg 1x" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
-					<source srcset="img/rainbow-background-1149610_1920-large_2x.jpg 2x, img/rainbow-background-1149610_1920-large.jpg 1x" type="image/jpeg" media="(min-width: 1024px)" />
-					<img alt="A winded road leads into a rainbow" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-				</picture>
-
-			</div>
-		</header>
-
-		<main class="container">
-
-			<section class="portfolio">
-
-				<h2 id="heading-portfolio">Featured Work</h2>
 				<div class="row">
+					<div class="col-xs-12 hr"></div>
+				</div>
+				<div class="row" class=" teaser">
+					<div class="col-xs-12">
+						<picture>
+							<source srcset="img/rainbow-background-1149610_crop-small_2x.jpg 2x, img/rainbow-background-1149610_crop-small.jpg 1x" type="image/jpeg" media="(max-width: 320px)" />
+							<source srcset="img/rainbow-background-1149610_1920-medium_2x.jpg 2x, img/rainbow-background-1149610_1920-medium.jpg 1x" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
+							<source srcset="img/rainbow-background-1149610_1920-large_2x.jpg 2x, img/rainbow-background-1149610_1920-large.jpg 1x" type="image/jpeg" media="(min-width: 1024px)" />
+							<img alt="A winded road leads into a rainbow" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+						</picture>
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<section class="portfolio">
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 id="heading-portfolio">Featured Work</h2>
+						</div>
+					</div>
+					<div class="row">
+<!--- portfolio_marker -->
+
+						<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+							<figure>
+								<div class="porfolio-picture-wrapper">
+									<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+
+									<picture class="portfolio-picture">
+										<source srcset="img/dodenhof.01-small.jpg, img/dodenhof.01-small_2x.jpg 2x" type="image/png" media="(max-width: 320px)" />
+										<source srcset="img/dodenhof.01-large.jpg" type="image/png" media="(min-width: 1024px)" />
+										<source srcset="img/dodenhof.01-medium.jpg" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="dodenhof" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+								<figcaption>
+									<h3>dodenhof</h3>
+								</figcaption>
+							</figure>
+							<p class="portfolio-teaser portfolio-text">A german retailer. As a frontend developer my job was to implement changes in close cooperation with the digital agency and the backend team neusta, locted in Bremen. The work consisted mostly on implementing draft designs and improving existing modules. Lazy loading and performance enhancement of a page featuring 8 galleries with a total of 300 images was one of the key challenges.</p>
+							<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+						</article>
+
+						<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+							<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+							<div class="slick-slider">
+
+								<div class="portfolio-item">
+
+									<picture class="portfolio-picture">
+										<source srcset="img/yakumooks.01-small.jpg, img/yakumooks.01-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
+										<source srcset="img/yakumooks.01-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
+										<source srcset="img/yakumooks.01-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="Ragnarök Merchant Calculator (1)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+
+								<div class="portfolio-item">
+
+									<picture class="portfolio-picture">
+										<source srcset="img/yakumooks.02-small.jpg, img/yakumooks.02-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
+										<source srcset="img/yakumooks.02-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
+										<source srcset="img/yakumooks.02-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="Ragnarök Merchant Calculator (2)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+
+								<div class="portfolio-item">
+
+									<picture class="portfolio-picture">
+										<source srcset="img/yakumooks.03-small.jpg, img/yakumooks.03-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
+										<source srcset="img/yakumooks.03-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
+										<source srcset="img/yakumooks.03-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="Ragnarök Merchant Calculator (3)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+
+							</div>
+							<h3>Ragnarök Merchant Calculator</h3>
+							<p class="portfolio-teaser portfolio-text">Decades ago a free MMORP in it's early stages allowed for free exploration and adventure. I then created a dedicated website that offered quick insights and served as a handy tool for quick calculations. It features a searchengine for monsters and their droppings as well as a map of the area generated from tiles and a mapping of their respective interconnections.</p>
+							<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+						</article>
+
+						<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+							<figure>
+								<div class="porfolio-picture-wrapper">
+									<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+
+									<picture class="portfolio-picture">
+										<source srcset="img/movies.01-small.jpg, img/movies.01-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
+										<source srcset="img/movies.01-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
+										<source srcset="img/movies.01-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="Movie list" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+								<figcaption>
+									<h3>Movie list</h3>
+								</figcaption>
+							</figure>
+							<p class="portfolio-teaser portfolio-text">Based on an existing responsive template my task was to extend a movie listing site using the freshly acquired skills from the python programming language course. But beware - some of them are genuine german or even french. Subtitles might come in handy.</p>
+							<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+						</article>
+
+						<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+							<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+							<div class="slick-slider">
+
+								<div class="portfolio-item">
+
+									<picture class="portfolio-picture">
+										<source srcset="img/logo-cityflowers-black-4x3-small.png, img/logo-cityflowers-black-4x3-small_2x.png 2x" type="image/png" media="(max-width: 320px)" />
+										<source srcset="img/logo-cityflowers-black-4x3-large.png" type="image/png" media="(min-width: 1024px)" />
+										<source srcset="img/logo-cityflowers-black-4x3-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="Logos (1)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+
+								<div class="portfolio-item">
+
+									<picture class="portfolio-picture">
+										<source srcset="img/logo-myflair-4x3-small.png, img/logo-myflair-4x3-small_2x.png 2x" type="image/png" media="(max-width: 320px)" />
+										<source srcset="img/logo-myflair-4x3-large.png, img/logo-myflair-4x3-large_2x.png 2x" type="image/png" media="(min-width: 1024px)" />
+										<source srcset="img/logo-myflair-4x3-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="Logos (2)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+
+							</div>
+							<h3>Logos</h3>
+							<p class="portfolio-teaser portfolio-text">Some logos I have designed over time. From an online furniture retailer to a spanish language school. I've used CorelDRAW! for vector image design back in the days. Some Logos, eg. the Cityflowers ankh were originally drawn on a Comodore Amiga 500 on a program called Deluxe Paint.</p>
+							<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+						</article>
+
+						<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+							<figure>
+								<div class="porfolio-picture-wrapper">
+									<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+
+									<picture class="portfolio-picture">
+										<source srcset="img/varengoldbankfx.01-small.jpg, img/varengoldbankfx.01-small_2x.jpg 2x" type="image/png" media="(max-width: 320px)" />
+										<source srcset="img/varengoldbankfx.01-large.jpg" type="image/png" media="(min-width: 1024px)" />
+										<source srcset="img/varengoldbankfx.01-medium.jpg" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="FX Retailer website" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+								<figcaption>
+									<h3>FX Retailer website</h3>
+								</figcaption>
+							</figure>
+							<p class="portfolio-teaser portfolio-text">Most of my professional live I have spent developing web solutions for a german FX retailer. The frontend was a Typo3 website. Since the customer signup process was running on a server located onsite of the customers, the data center hosted Typo3 site had to be extended by wrapping and special caching mechanisms.</p>
+							<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+						</article>
+
+						<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+							<figure>
+								<div class="porfolio-picture-wrapper">
+									<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+
+									<picture class="portfolio-picture">
+										<source srcset="img/kdb.01-small.png, img/kdb.01-small_2x.png 2x" type="image/png" media="(max-width: 320px)" />
+										<source srcset="img/kdb.01-large.png" type="image/png" media="(min-width: 1024px)" />
+										<source srcset="img/kdb.01-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
+
+										<img alt="KDB" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+									</picture>
+
+								</div>
+								<figcaption>
+									<h3>KDB</h3>
+								</figcaption>
+							</figure>
+							<p class="portfolio-teaser portfolio-text">The fully featured customer onboarding solution was originally developed in PHP3 in 2006. Refactoring and performance improvement were the centerpieces of my work untill summer 2016. In it's long lifespan i was entrusted with the interfacing to the various systems the company used to operate it's business. The solution featured a sophisticated contract management tool suite covering the layout, versioning and the delivery of the files to the clients. The project was terminated and all resources went offline.</p>
+							<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+						</article>
 
 <!--- portfolio_marker -->
 
-					<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-						<figure>
-							<div class="porfolio-picture-wrapper">
-								<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
-
-								<picture class="portfolio-picture">
-									<source srcset="img/dodenhof.01-small.jpg, img/dodenhof.01-small_2x.jpg 2x" type="image/png" media="(max-width: 320px)" />
-									<source srcset="img/dodenhof.01-large.jpg" type="image/png" media="(min-width: 1024px)" />
-									<source srcset="img/dodenhof.01-medium.jpg" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="dodenhof" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-							<figcaption>
-								<h3>dodenhof</h3>
-							</figcaption>
-						</figure>
-						<p class="portfolio-teaser portfolio-text">A german retailer. As a frontend developer my job was to implement changes in close cooperation with the digital agency and the backend team neusta, locted in Bremen. The work consisted mostly on implementing draft designs and improving existing modules. Lazy loading and performance enhancement of a page featuring 8 galleries with a total of 300 images was one of the key challenges.</p>
-						<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-					</article>
-
-					<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-						<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
-						<div class="slick-slider">
-
-							<div class="portfolio-item">
-
-								<picture class="portfolio-picture">
-									<source srcset="img/yakumooks.01-small.jpg, img/yakumooks.01-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
-									<source srcset="img/yakumooks.01-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
-									<source srcset="img/yakumooks.01-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="Ragnarök Merchant Calculator (1)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-
-							<div class="portfolio-item">
-
-								<picture class="portfolio-picture">
-									<source srcset="img/yakumooks.02-small.jpg, img/yakumooks.02-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
-									<source srcset="img/yakumooks.02-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
-									<source srcset="img/yakumooks.02-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="Ragnarök Merchant Calculator (2)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-
-							<div class="portfolio-item">
-
-								<picture class="portfolio-picture">
-									<source srcset="img/yakumooks.03-small.jpg, img/yakumooks.03-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
-									<source srcset="img/yakumooks.03-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
-									<source srcset="img/yakumooks.03-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="Ragnarök Merchant Calculator (3)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-
-						</div>
-						<h3>Ragnarök Merchant Calculator</h3>
-						<p class="portfolio-teaser portfolio-text">Decades ago a free MMORP in it's early stages allowed for free exploration and adventure. I then created a dedicated website that offered quick insights and served as a handy tool for quick calculations. It features a searchengine for monsters and their droppings as well as a map of the area generated from tiles and a mapping of their respective interconnections.</p>
-						<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-					</article>
-
-					<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-						<figure>
-							<div class="porfolio-picture-wrapper">
-								<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
-
-								<picture class="portfolio-picture">
-									<source srcset="img/movies.01-small.jpg, img/movies.01-small_2x.jpg 2x" type="image/jpeg" media="(max-width: 320px)" />
-									<source srcset="img/movies.01-large.jpg" type="image/jpeg" media="(min-width: 1024px)" />
-									<source srcset="img/movies.01-medium.jpg" type="image/jpeg" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="Movie list" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-							<figcaption>
-								<h3>Movie list</h3>
-							</figcaption>
-						</figure>
-						<p class="portfolio-teaser portfolio-text">Based on an existing responsive template my task was to extend a movie listing site using the freshly acquired skills from the python programming language course. But beware - some of them are genuine german or even french. Subtitles might come in handy.</p>
-						<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-					</article>
-
-					<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-						<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
-						<div class="slick-slider">
-
-							<div class="portfolio-item">
-
-								<picture class="portfolio-picture">
-									<source srcset="img/logo-cityflowers-black-4x3-small.png, img/logo-cityflowers-black-4x3-small_2x.png 2x" type="image/png" media="(max-width: 320px)" />
-									<source srcset="img/logo-cityflowers-black-4x3-large.png" type="image/png" media="(min-width: 1024px)" />
-									<source srcset="img/logo-cityflowers-black-4x3-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="Logos (1)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-
-							<div class="portfolio-item">
-
-								<picture class="portfolio-picture">
-									<source srcset="img/logo-myflair-4x3-small.png, img/logo-myflair-4x3-small_2x.png 2x" type="image/png" media="(max-width: 320px)" />
-									<source srcset="img/logo-myflair-4x3-large.png, img/logo-myflair-4x3-large_2x.png 2x" type="image/png" media="(min-width: 1024px)" />
-									<source srcset="img/logo-myflair-4x3-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="Logos (2)" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-
-						</div>
-						<h3>Logos</h3>
-						<p class="portfolio-teaser portfolio-text">Some logos I have designed over time. From an online furniture retailer to a spanish language school. I've used CorelDRAW! for vector image design back in the days. Some Logos, eg. the Cityflowers ankh were originally drawn on a Comodore Amiga 500 on a program called Deluxe Paint.</p>
-						<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-					</article>
-
-					<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-						<figure>
-							<div class="porfolio-picture-wrapper">
-								<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
-
-								<picture class="portfolio-picture">
-									<source srcset="img/varengoldbankfx.01-small.jpg, img/varengoldbankfx.01-small_2x.jpg 2x" type="image/png" media="(max-width: 320px)" />
-									<source srcset="img/varengoldbankfx.01-large.jpg" type="image/png" media="(min-width: 1024px)" />
-									<source srcset="img/varengoldbankfx.01-medium.jpg" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="FX Retailer website" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-							<figcaption>
-								<h3>FX Retailer website</h3>
-							</figcaption>
-						</figure>
-						<p class="portfolio-teaser portfolio-text">Most of my professional live I have spent developing web solutions for a german FX retailer. The frontend was a Typo3 website. Since the customer signup process was running on a server located onsite of the customers, the data center hosted Typo3 site had to be extended by wrapping and special caching mechanisms.</p>
-						<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-					</article>
-
-					<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-						<figure>
-							<div class="porfolio-picture-wrapper">
-								<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
-
-								<picture class="portfolio-picture">
-									<source srcset="img/kdb.01-small.png, img/kdb.01-small_2x.png 2x" type="image/png" media="(max-width: 320px)" />
-									<source srcset="img/kdb.01-large.png" type="image/png" media="(min-width: 1024px)" />
-									<source srcset="img/kdb.01-medium.png" type="image/png" media="(min-width: 321px) and (max-width: 1023px)" />
-
-									<img alt="KDB" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-								</picture>
-
-							</div>
-							<figcaption>
-								<h3>KDB</h3>
-							</figcaption>
-						</figure>
-						<p class="portfolio-teaser portfolio-text">The fully featured customer onboarding solution was originally developed in PHP3 in 2006. Refactoring and performance improvement were the centerpieces of my work untill summer 2016. In it's long lifespan i was entrusted with the interfacing to the various systems the company used to operate it's business. The solution featured a sophisticated contract management tool suite covering the layout, versioning and the delivery of the files to the clients. The project was terminated and all resources went offline.</p>
-						<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-					</article>
-
-<!--- portfolio_marker -->
-
-					<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="heading-portfolio">
-						<div class="modal-dialog modal-lg" role="document">
-							<div class="modal-content">
-								<div class="modal-showcase"></div>
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="heading-portfolio">
+							<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-showcase"></div>
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
 							</div>
 						</div>
 					</div>
+
+				</section>
+
+			</main>
+
+			<footer class="row">
+				<div class="col-xs-12">
+					<p>Oliver Schleede in 2017 for Udacity <a href="http://udacity.com">udacity.com</a></p>
+					<img alt="W3C valid HTML 4.01" src="http://www.w3.org/Icons/valid-html401-blue.png" /> <img alt="W3C valid XHTML 1.0" src="http://www.w3.org/Icons/valid-xhtml10-blue.png" />
 				</div>
-
-			</section>
-
-		</main>
-
-		<footer class="container">
-			<p>Oliver Schleede in 2017 for Udacity <a href="http://udacity.com">udacity.com</a></p>
-			<img alt="W3C valid HTML 4.01" src="http://www.w3.org/Icons/valid-html401-blue.png" /> <img alt="W3C valid XHTML 1.0" src="http://www.w3.org/Icons/valid-xhtml10-blue.png" />
-		</footer>
-
+			</footer>
+		</div>
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
