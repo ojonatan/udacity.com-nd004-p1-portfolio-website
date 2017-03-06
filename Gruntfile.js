@@ -155,9 +155,9 @@ module.exports = function(grunt){
 					}
 				},
 				files: {
-					'public/css/slick-theme.css': 'less/slick-theme.less',
-					'public/css/slick.css': 'less/slick.less',
-					'public/css/bootstrap.css': 'less/bootstrap.custom.less'
+					'public/css/slick-theme.wrapper.css': 'less/slick-theme.wrapper.less',
+					'public/css/slick.wrapper.css': 'less/slick.wrapper.less',
+					'public/css/bootstrap.wrapper.css': 'less/bootstrap.wrapper.less'
 				}
 			}
 		},

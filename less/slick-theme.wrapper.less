@@ -1,5 +1,11 @@
 @import "../public/bower_components/slick-carousel/slick/slick-theme.less";
 
+.slick-slider {
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .slick-dots {
 	bottom: 0;
 	
@@ -17,6 +23,30 @@
 	color: #fff;
 	text-shadow: 1px 1px 3px #000;
 	opacity: 0.8;
+}
+
+.slick-slider {
+	background: transparent url(../img/squares.svg) center center no-repeat;
+
+}
+
+.slick-slider .portfolio-item img
+{
+	visibility: hidden;
+}
+
+.slick-slider.initiated .portfolio-item img
+{
+	visibility: visible;
+}
+
+.slick-slider .portfolio-item {
+	display: none;
+}
+
+.slick-slider .portfolio-item:first-child,
+.slick-slider.initiated .portfolio-item {
+	display: block;
 }
 
 @slick-loader-path: "../bower_components/slick-carousel/slick/";

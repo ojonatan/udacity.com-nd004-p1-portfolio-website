@@ -5,48 +5,48 @@ import json
 import os
 from PIL import Image
 
-template_source = '''{indention}<source srcset="{images}" type="{type}" media="{media}" />
+template_source = '''{indention}<source srcset="{images}" type="{type}" media="{media}">
 '''
 
 template_picture = '''
 {indention}<picture class="portfolio-picture">
 {sources}
-{indention}{t}<img alt="{alt}" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+{indention}{t}<img alt="{alt}" class="image-loading portfolio-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
 {indention}</picture>
 '''
 
 template_article_single_image = '''
-{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-{t}{t}{t}{t}{t}{t}<figure>
-{t}{t}{t}{t}{t}{t}{t}<div class="porfolio-picture-wrapper">
-{t}{t}{t}{t}{t}{t}{t}{t}<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+{t}{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+{t}{t}{t}{t}{t}{t}{t}<figure>
+{t}{t}{t}{t}{t}{t}{t}{t}<div class="porfolio-picture-wrapper">
+{t}{t}{t}{t}{t}{t}{t}{t}{t}<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
 {picture}
-{t}{t}{t}{t}{t}{t}{t}</div>
-{t}{t}{t}{t}{t}{t}{t}<figcaption>
-{t}{t}{t}{t}{t}{t}{t}{t}<h3>{title}</h3>
-{t}{t}{t}{t}{t}{t}{t}</figcaption>
-{t}{t}{t}{t}{t}{t}</figure>
-{t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
-{t}{t}{t}{t}{t}{t}<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-{t}{t}{t}{t}{t}</article>
+{t}{t}{t}{t}{t}{t}{t}{t}</div>
+{t}{t}{t}{t}{t}{t}{t}{t}<figcaption>
+{t}{t}{t}{t}{t}{t}{t}{t}{t}<h3>{title}</h3>
+{t}{t}{t}{t}{t}{t}{t}{t}</figcaption>
+{t}{t}{t}{t}{t}{t}{t}</figure>
+{t}{t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
+{t}{t}{t}{t}{t}{t}{t}<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+{t}{t}{t}{t}{t}{t}</article>
 '''
 
 template_portfolio_item = '''
-{t}{t}{t}{t}{t}{t}{t}<div class="portfolio-item">
+{t}{t}{t}{t}{t}{t}{t}{t}<div class="portfolio-item">
 {picture}
-{t}{t}{t}{t}{t}{t}{t}</div>
+{t}{t}{t}{t}{t}{t}{t}{t}</div>
 '''
 
 template_article_multiple_images = '''
-{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
-{t}{t}{t}{t}{t}{t}<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
-{t}{t}{t}{t}{t}{t}<div class="slick-slider">
+{t}{t}{t}{t}{t}{t}<article class="portfolio-article col-xs-12 col-sm-6 col-lg-4">
+{t}{t}{t}{t}{t}{t}{t}<div class="porfolio-earmark" data-no-height="1" data-toggle="modal" data-target="#more-info"></div>
+{t}{t}{t}{t}{t}{t}{t}<div class="slick-slider">
 {portfolio_items}
-{t}{t}{t}{t}{t}{t}</div>
-{t}{t}{t}{t}{t}{t}<h3>{title}</h3>
-{t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
-{t}{t}{t}{t}{t}{t}<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
-{t}{t}{t}{t}{t}</article>
+{t}{t}{t}{t}{t}{t}{t}</div>
+{t}{t}{t}{t}{t}{t}{t}<h3>{title}</h3>
+{t}{t}{t}{t}{t}{t}{t}<p class="portfolio-teaser portfolio-text">{text}</p>
+{t}{t}{t}{t}{t}{t}{t}<button class="portfolio-more btn btn-default" data-toggle="modal" data-target="#more-info">Read more...</button>
+{t}{t}{t}{t}{t}{t}</article>
 '''
 
 dpr = 2
@@ -125,20 +125,20 @@ for portfolio in portfolio_list:
                     images=", ".join(picture["sources"][source]["images"]),
                     type=picture["type"],
                     media=picture["sources"][source]["media"],
-                    indention="\t\t\t\t\t\t\t\t\t",
+                    indention="\t\t\t\t\t\t\t\t\t\t",
                     t="\t"
                 )
             
             html_picture = template_picture.format(
                 sources=html_sources,
                 alt=portfolio["title"].encode("utf-8").strip() + " (" + str(i) + ")",
-                indention="\t\t\t\t\t\t\t\t",
+                indention="\t\t\t\t\t\t\t\t\t",
                 t="\t"
             )
 
             html_portfolio_items += template_portfolio_item.format(
                 picture=html_picture,
-                indention="\t\t\t" ,
+                indention="\t\t\t\t" ,
                 t="\t"           
             )
 
@@ -156,13 +156,13 @@ for portfolio in portfolio_list:
                 images=", ".join(portfolio["pictures"][0]["sources"][source]["images"]),
                 type=picture["type"],
                 media=picture["sources"][source]["media"],
-                indention="\t\t\t\t\t\t\t\t\t"
+                indention="\t\t\t\t\t\t\t\t\t\t"
             )
 
         html_picture = template_picture.format(
             sources=html_sources,
             alt=portfolio["title"].encode("utf-8").strip(),
-            indention="\t\t\t\t\t\t\t\t",
+            indention="\t\t\t\t\t\t\t\t\t",
             t="\t"
         )
         
